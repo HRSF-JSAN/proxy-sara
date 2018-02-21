@@ -1,2 +1,2 @@
-# Tile-Map-proxy
-Proxy server for Tile-Map component
+# Title-Map-proxy
+Proxy server for Title-Map component
