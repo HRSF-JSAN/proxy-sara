@@ -1,2 +1,2 @@
-# Title-Map-proxy
-Proxy server for Title-Map component
+# title-map-proxy
+Proxy server for title-map component
