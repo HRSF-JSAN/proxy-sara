@@ -2,14 +2,29 @@
   "name": "-y",
   "version": "1.0.0",
   "description": "title-map proxy server",
-  "main": "index.js",
+  "main": "proxy.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon proxy.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MichaelDurfey/FoodiGo.git"
   },
   "author": "Michael Durfey",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.2",
-    "morgan": "^1.9.0"
-  }
+    "morgan": "^1.9.0",
+    "nodemon": "^1.17.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "request": "^2.83.0",
+    "webpack": "^3.11.0"
+  },
+  "bugs": {
+    "url": "https://github.com/MichaelDurfey/FoodiGo/issues"
+  },
+  "homepage": "https://github.com/MichaelDurfey/FoodiGo#readme",
+  "devDependencies": {}
 }
