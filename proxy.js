@@ -15,10 +15,7 @@ app.set('port', process.env.PORT || 3004);
 app.use(express.static(path.join(__dirname)));
 app.use(express.static(path.join(__dirname, '../title-map/client/dist')));
 
-// app.use('')
-
 app.get('/restaurant/:id', (req, res) => {
-  console.log(req.params.id)
     res.render('index', { id: req.params.id})
 })
 
