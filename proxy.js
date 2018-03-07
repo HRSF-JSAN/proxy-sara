@@ -8,19 +8,19 @@ const router = require('./router');
 const app = express();
 
 app.use(morgan('dev'));
+app.set('view engine', 'pug')
 
 app.set('port', process.env.PORT || 3004);
 
 app.use(express.static(path.join(__dirname)));
 app.use(express.static(path.join(__dirname, '../title-map/client/dist')));
 
+// app.use('')
 
-app.get('/:id', (req, res) => {
-    request({
-      url: `http://localhost:3001${req.path}`,
-      method: req.method,
-    }).pipe(res)
-  });
+app.get('/restaurant/:id', (req, res) => {
+  console.log(req.params.id)
+    res.render('index', { id: req.params.id})
+})
 
 app.use('/', router);
 
