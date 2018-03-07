@@ -1,69 +1,34 @@
 const request = require('supertest');
 const app = require('../proxy.js');
 
-describe('Proxy Server', () => {
-  test('/restaurant/:id responds with 200', (done) => {
-    request(app)
+describe('Proxy.js', () => {
+  test('/restaurant/:id responds with 200', () => {
+   return request(app)
       .get('/restaurant/164')
-      .expect(200)
-      .end((err) => {
-        if (err) {
-          done(err);
-        } else {
-          done();
-        }
-      });
+      .then(res => {
+        expect(res.text.length).toBeGreaterThan(200);
+      })
   });
-  test('/pictures/:id responds with 200', (done) => {
-    return request(app)
-      .get('/pictures/114')
-      .expect(200)
-      .end((err) => {
-        if (err) {
-          done(err);
-        } else {
-          done();
-        }
-      });
+  test('/pictures/:id responds with 200', () => {
+    return request(app).get('/pictures/114').expect(200);
   });
 
-  test('/title/:id responds with 200', (done) => {
+  test('/title/:id responds with 200', () => {
     return request(app)
       .get('/title/115')
-      .expect(200)
-      .end((err) => {
-        if (err) {
-          done(err);
-        } else {
-          done();
-        }
-      });
+      .expect(200);
   });
 
-  test('/map/:id responds with 200', (done) => {
+  test('/map/:id responds with 200', () => {
     return request(app)
       .get('/map/117')
-      .expect(200)
-      .end((err) => {
-        if (err) {
-          done(err);
-        } else {
-          done();
-        }
-      });
+      .expect(200);
   });
 
 
-  test('/information/:id responds with 200', (done) => {
+  test('/information/:id responds with 200', () => {
     return request(app)
       .get('/information/174')
       .expect(200)
-      .end((err) => {
-        if (err) {
-          done(err);
-        } else {
-          done();
-        }
-      });
   });
 });

@@ -31,9 +31,4 @@ app.get('/restaurant/:id', (req, res) => {
 
 app.use('/', router);
 
-
-
-
-app.listen(app.get('port'), () => console.log(`sever listening on ${app.get('port')}`));
-
 module.exports = app;
