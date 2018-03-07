@@ -10,13 +10,27 @@ describe('Proxy.js', () => {
       })
   });
   test('/pictures/:id responds with 200', () => {
-    return request(app).get('/pictures/114').expect(200);
+    return request(app)
+      .get('/pictures/114')
+      .expect(200);
   });
 
   test('/title/:id responds with 200', () => {
     return request(app)
       .get('/title/115')
       .expect(200);
+  });
+
+  test('/title/:id responds with 200', () => {
+    return request(app)
+      .get('/title/115')
+      .expect(200);
+  });
+
+  test('handles post requests to title component', () => {
+    return request(app).post('/').send({ type: 'Italian', id: '123' })
+      .set('contentType', 'multipart/form-data')
+      .expect(201)
   });
 
   test('/map/:id responds with 200', () => {

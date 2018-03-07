@@ -1,5 +1,6 @@
 const express = require('express');
 const morgan = require('morgan');
+const parse = require('body-parser');
 const request = require('request');
 const path = require('path');
 const url = require('url');
@@ -8,8 +9,9 @@ const router = require('./router');
 const app = express();
 
 app.use(morgan('dev'));
-//  app.set('views', './views')
+app.use(parse.urlencoded({ extended: false }));
 app.set('view engine', 'pug')
+
 
 app.set('port', 3004);
 app.use(express.static(__dirname));

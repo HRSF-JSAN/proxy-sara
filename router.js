@@ -48,8 +48,6 @@ router
       url: `http://localhost:3001${req.path}`,
       method: req.method,
       form: req.body,
-    }).on('error', (err) => {
-      throw new Error(err);
     }).pipe(res);
   });
 
