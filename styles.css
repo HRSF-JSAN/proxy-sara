@@ -1,0 +1,41 @@
+#title-map {
+  top: 56px;
+  left: 210px;
+  right: 0px;
+  bottom: 0px;
+  width: 370px;
+  position: absolute;
+}
+
+#proxy-reviews {
+  position: absolute;
+  top: 621px;
+  bottom: 0px;
+  left: 194px;
+  width: 700px;
+}
+
+#pictures {
+  position: absolute;
+  top: 261px;
+  right: 0;
+  width: 100%;
+  left: 564px;
+}
+
+#sidebar {
+  position: absolute;
+  right: 20px;
+  left: 887px;
+  top: 644px;
+}
+
+#nav {
+  width: 100%;
+  background-color: #C2081A;
+  height: 55px;
+}
+
+#logo {
+  height: 55px;
+}

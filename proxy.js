@@ -8,12 +8,23 @@ const router = require('./router');
 const app = express();
 
 app.use(morgan('dev'));
+//  app.set('views', './views')
 app.set('view engine', 'pug')
 
 app.set('port', process.env.PORT || 3004);
+app.use(express.static(__dirname));
 
-app.use(express.static(path.join(__dirname)));
-app.use(express.static(path.join(__dirname, '../title-map/client/dist')));
+app.get('/restaurant/styles.css', (req, res) => {
+    const fileName = req.path
+    console.log(__dirname)
+    var options = {
+        headers: {
+            root: __dirname,
+            'Content-Type': 'text/css'
+        }
+    };
+    res.sendFile(__dirname + '/styles.css', options)
+})
 
 app.get('/restaurant/:id', (req, res) => {
     res.render('index', { id: req.params.id})
