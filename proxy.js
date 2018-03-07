@@ -11,12 +11,11 @@ app.use(morgan('dev'));
 //  app.set('views', './views')
 app.set('view engine', 'pug')
 
-app.set('port', process.env.PORT || 3004);
+app.set('port', 3004);
 app.use(express.static(__dirname));
 
 app.get('/restaurant/styles.css', (req, res) => {
     const fileName = req.path
-    console.log(__dirname)
     var options = {
         headers: {
             root: __dirname,
@@ -36,3 +35,5 @@ app.use('/', router);
 
 
 app.listen(app.get('port'), () => console.log(`sever listening on ${app.get('port')}`));
+
+module.exports = app;

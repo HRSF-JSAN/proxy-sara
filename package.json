@@ -1,11 +1,15 @@
 {
   "name": "-y",
   "version": "1.0.0",
+  "jest": {
+    "verbose": true
+  },
   "description": "title-map proxy server",
   "main": "proxy.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon proxy.js"
+    "start": "nodemon proxy.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -16,12 +20,14 @@
   "dependencies": {
     "ejs": "^2.5.7",
     "express": "^4.16.2",
+    "jest": "^22.4.2",
     "morgan": "^1.9.0",
     "nodemon": "^1.17.1",
     "pug": "^2.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "request": "^2.83.0",
+    "supertest": "^3.0.0",
     "webpack": "^3.11.0"
   },
   "bugs": {
