@@ -1,3 +1,5 @@
 const app = require('./proxy.js');
 
-app.listen(app.get('port'), () => console.dir(`sever listening on ${app.get('port')}`));
+const port = process.env.PORT || 3600;
+
+app.listen(port, () => console.dir(`sever listening on ${port}`));

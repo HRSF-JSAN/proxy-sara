@@ -8,9 +8,6 @@ app.use(parse.urlencoded({ extended: false }));
 app.use(parse.json());
 app.set('view engine', 'pug');
 
-
-app.set('port', process.env.PORT || 3004);
-
 app.use('/', router);
 
 module.exports = app;
