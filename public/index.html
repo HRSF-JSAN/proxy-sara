@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="/styles.css"></link>
+  <link rel="stylesheet" href = "http://foodigosidebar-env.us-east-2.elasticbeanstalk.com/style.css"></link>
+  <link rel="stylesheet" href="http://foodigoreviews.us-west-1.elasticbeanstalk.com/style.css"></link>
+  <link rel="stylesheet" href="http://foodigopictures.us-west-1.elasticbeanstalk.com/style.css"></link>
+</head>
+<body>
+  <div id="nav"><img id ="logo" alt="logo" src="https://s3-us-west-1.amazonaws.com/foodigoiconlib/FoodiGo.png" /></div>
+  <div id="container">
+    <div id="prox-header-bottom"></div>
+    <div id="nav-bar"></div>
+    <div id="title-map"></div>
+    <div id="proxy-reviews"></div>
+    <div id="pictures"></div>
+    <div id="sidebar"></div>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="http://foodigotitle-env.us-west-1.elasticbeanstalk.com/bundle.js"></script>
+    <script src="http://foodigoreviews.us-west-1.elasticbeanstalk.com/bundle.js"></script>
+    <script src="http://foodigopictures.us-west-1.elasticbeanstalk.com/bundle.js"></script>
+    <script src="http://foodigosidebar-env.us-east-2.elasticbeanstalk.com/bundle.js"></script>
+    <script>
+      let id = Math.floor((Math.random() * (200 - 101)) + 101);
+      ReactDOM.render(
+        React.createElement(TitleMap, {id: id}, null), document.getElementById('title-map')
+      )
+    </script>
+    <script>
+        ReactDOM.render(
+          React.createElement(ReviewApp, {restaurantId: id}, null), document.getElementById('proxy-reviews')
+        )
+    </script>
+    <script>
+        ReactDOM.render(
+          React.createElement(Pictures, {id: id}, null), document.getElementById('pictures')
+        )
+    </script>
+    <script>
+        ReactDOM.render(
+          React.createElement(Sidebar, {id: id}, null), document.getElementById('sidebar')
+        )
+    </script>
+  </div>
+</body>
+</html>

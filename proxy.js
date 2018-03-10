@@ -6,7 +6,7 @@ const app = express();
 
 app.use(parse.urlencoded({ extended: false }));
 app.use(parse.json());
-app.use(express.static('views'));
+app.use(express.static('public'));
 app.set('views', './views');
 app.set('view engine', 'pug');
 

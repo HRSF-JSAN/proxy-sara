@@ -2,7 +2,6 @@ const express = require('express');
 
 const router = express.Router();
 const request = require('request');
-const path = require('path');
 
 router
   .get('/title/:id', (req, res) => {
@@ -32,15 +31,6 @@ router
       url: 'http://foodigotitle-env.us-west-1.elasticbeanstalk.com/ca5f7af07bcf83d9dd2487687a1d5bda.jpg',
       method: req.method,
     }).pipe(res);
-  })
-  .get('/styles.css', (req, res) => {
-    const options = {
-      headers: {
-        root: __dirname,
-        'Content-Type': 'text/css',
-      },
-    };
-    res.sendFile(path.join(__dirname, '/styles.css'), options);
   })
   .get('/restaurants/:id/reviews', (req, res) => {
     request({
