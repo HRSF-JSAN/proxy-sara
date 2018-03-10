@@ -30,7 +30,7 @@ describe('Proxy.js', () => {
   test('handles post requests to title component', () => {
     return request(app).post('/').send({ type: 'Italian', id: '123' })
       .set('contentType', 'multipart/form-data')
-      .expect(201)
+      .expect(201);
   });
 
   test('/map/:id responds with 200', () => {
