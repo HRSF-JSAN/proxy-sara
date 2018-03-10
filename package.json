@@ -5,10 +5,10 @@
     "verbose": true
   },
   "description": "title-map proxy server",
-  "main": "proxy.js",
+  "main": "server.js",
   "scripts": {
     "test": "jest",
-    "start": "nodemon proxy.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -21,8 +21,6 @@
     "ejs": "^2.5.7",
     "express": "^4.16.2",
     "jest": "^22.4.2",
-    "morgan": "^1.9.0",
-    "nodemon": "^1.17.1",
     "pug": "^2.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
@@ -34,5 +32,10 @@
     "url": "https://github.com/MichaelDurfey/FoodiGo/issues"
   },
   "homepage": "https://github.com/MichaelDurfey/FoodiGo#readme",
-  "devDependencies": {}
+  "devDependencies": {
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0"
+  }
 }
