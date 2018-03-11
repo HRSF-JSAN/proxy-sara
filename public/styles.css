@@ -7,6 +7,10 @@
   position: absolute;
 }
 
+.card-img-top {
+  max-height: 241px;
+}
+
 #proxy-reviews {
   position: absolute;
   top: 621px;

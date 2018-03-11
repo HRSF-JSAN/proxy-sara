@@ -26,7 +26,8 @@
     "react-dom": "^16.2.0",
     "request": "^2.83.0",
     "supertest": "^3.0.0",
-    "webpack": "^3.11.0"
+    "webpack": "^3.11.0",
+    "yelp-fusion": "^2.0.3"
   },
   "bugs": {
     "url": "https://github.com/MichaelDurfey/FoodiGo/issues"
