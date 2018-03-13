@@ -6,8 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>FoodiGo</title>
-  <link rel="stylesheet" href="/styles.css"></link>
-  <link rel="stylesheet" href = "http://foodigosidebar-env.us-east-2.elasticbeanstalk.com/style.css"></link>
+  <link 
+    rel="preload" href="styles.css" 
+    as="style" onload="this.rel='stylesheet'"
+  >
   <link rel="stylesheet" href="http://foodigoreviews.us-west-1.elasticbeanstalk.com/style.css"></link>
   <link rel="stylesheet" href="http://foodigopictures.us-west-1.elasticbeanstalk.com/style.css"></link>
 </head>
