@@ -1,3 +1,7 @@
 node_modules
 .DS_Store
 .gitignore
+stressTesting
+newrelic.js
+rewrelic_agent.log
+bundles
