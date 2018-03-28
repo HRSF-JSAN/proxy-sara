@@ -9,6 +9,7 @@ module.exports = (links, body, scripts) => `
       ${links}
     </head>
     <body>
+    <p>This is SSR!</p>
       <div id="nav"><img id ="logo" alt="logo" src="https://s3-us-west-1.amazonaws.com/foodigoiconlib/FoodiGo.png" /></div>
       <div id="container">
         ${body}

@@ -1,4 +1,4 @@
-#title-map {
+#TitleMap {
   top: 56px;
   left: 210px;
   right: 0px;
@@ -19,7 +19,7 @@
   width: 700px;
 }
 
-#pictures {
+#Photos {
   position: absolute;
   top: 261px;
   right: 0;
@@ -27,7 +27,7 @@
   left: 564px;
 }
 
-#sidebar {
+#Sidebar {
   position: absolute;
   right: 20px;
   left: 887px;

@@ -2,6 +2,6 @@ module.exports = (items) => `
   <link rel="stylesheet" href="/style.css">
 
   ${items.map(item => {
-    return `<link rel="stylesheet" href="/${item}/style.css"></link>`;
+    return `<link rel="stylesheet" type="text/css" href="/${item}/style.css"></link>`;
   }).join('\n')}
 `;

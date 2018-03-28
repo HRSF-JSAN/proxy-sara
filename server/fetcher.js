@@ -2,7 +2,7 @@ const fs = require('fs');
 const fetch = require('node-fetch');
 const services = require('./services');
 
-// takes an obj of web components addresses
+// takes an obj of web componentsand their addresses
 const fetchBundles = (obj) => {
   Object.keys(obj).map(component => {
     const clientUrl = `${obj[component]}/bundle.js`;
@@ -32,4 +32,4 @@ const fetchBundles = (obj) => {
   });
 };
 
-fetchBundles(services);
+module.exports = fetchBundles;

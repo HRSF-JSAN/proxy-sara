@@ -3,5 +3,7 @@ node_modules
 .gitignore
 stressTesting
 newrelic.js
-rewrelic_agent.log
-bundles
+newrelic_agent.log
+bundles/Photos-bundle.js
+bundles/Photos-server-bundle.js
+npm-debug.log
