@@ -23,21 +23,23 @@ const renderComponents = (components, props = {}) => {
     let path = require(`../bundles/${item}-server-bundle.js`).default;
     // console.log(path);
     let component = React.createElement(path, props);
+    console.log('>');
     return ReactDom.renderToString(component);
   });
 };
 
 
 const templateRender = (id, res) => {
-  const props = { id }
-    let components = renderComponents(services, props);
-    headers['Content-Type'] = 'text/html';
-    res.writeHead(200, headers);
-    res.end(Html(
-      Links(['Photos']),
-      Body(...components),
-      Scripts(Object.keys(services), props)
-    ));
+  const props = { id };
+  props.restaurantId = id;
+  let components = renderComponents(services, props);
+  headers['Content-Type'] = 'text/html';
+  res.writeHead(200, headers);
+  res.end(Html(
+    Links(['Photos', 'Reviews']),
+    Body(...components),
+    Scripts(Object.keys(services), props)
+  ));
 }
 
 module.exports = templateRender;

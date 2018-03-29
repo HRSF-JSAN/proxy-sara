@@ -3,7 +3,7 @@ module.exports = (items, props) => `
   <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
 
   ${items.map(item => {
-    return `<script src="/${item}/bundle.js"></script>`;
+    return `<script src="http://ec2-18-144-42-226.us-west-1.compute.amazonaws.com/${item}/bundle.js"></script>`;
   }).join('\n')}
 
   <script>

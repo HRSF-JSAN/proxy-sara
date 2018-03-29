@@ -1,16 +1,10 @@
 const redis = require('redis');
 
-const REDIS_PORT = process.env.REDIS_PORT || 6379;
-const client = redis.createClient(REDIS_PORT);
+const client = redis.createClient('redis://ec2-54-193-71-53.us-west-1.compute.amazonaws.com:6379');
 
 const get = (key, callback) => {
   client.get(key, callback);
 };
-
-// const setBundle = (key, value) => {
-//   const stringVal = JSON.stringify(value);
-//   client.setex(`${key}`, 86400, stringVal);
-// };
 
 const setData = (key, value) => {
   const stringVal = JSON.stringify(value);
@@ -18,5 +12,4 @@ const setData = (key, value) => {
 };
 
 module.exports.get = get;
-// module.exports.setBundle = setBundle;
 module.exports.setData = setData;

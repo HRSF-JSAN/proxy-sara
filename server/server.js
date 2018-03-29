@@ -10,9 +10,9 @@ const app = http.createServer(handler);
 
 fetch(services);
 
-// setInterval(() => {
-//   fetch(services);
-// }, 1000 * 60 * 60 * 24); // ms * sec * min * hours = day
+setInterval(() => {
+  fetch(services);
+}, 1000 * 60 * 60 * 24); // ms * sec * min * hours = day
 
 const port = process.env.PORT || 3600;
 
